@@ -190,6 +190,59 @@ main{padding-top:30vh}.welcome{margin-bottom:-16px}.profile{background:none;isol
 .profile h2.name-medium{font-size:clamp(15px,1.65vw,22px)}
 .profile h2.name-small{font-size:clamp(11px,1.25vw,17px)}
 .profile .group{position:static;margin-top:6%;white-space:normal;overflow:visible;text-overflow:clip;line-height:1.1}
+
+/* ===== FINAL RESPONSIVE OVERRIDES ===== */
+@media(max-width:700px){html,body{max-width:100%;overflow-x:hidden}body{overflow-y:auto}main{height:auto;min-height:100dvh;padding:29vh 10px 24px}#studentPage{width:min(520px,90vw)}.welcome{max-width:88vw}.profile{width:100%;max-width:100%}.progress-open{overflow:hidden}.progress-open main{height:auto;min-height:100dvh}.quest-map{position:fixed;inset:0;display:flex;justify-content:flex-start;align-items:flex-start;overflow:auto;background:#23b7e7;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y}.quest-map-stage{position:relative;left:auto;top:auto;flex:0 0 auto;width:1000px;max-width:none;height:auto;min-height:0;aspect-ratio:1672/941;transform:none;margin:0;padding:0;background:none;overflow:visible}.quest-map-image{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}.route-node{width:var(--node-size,58px)!important;height:var(--node-size,58px)!important;min-width:0;min-height:0;aspect-ratio:1;border-radius:50%}.winner-shelf{align-items:stretch;justify-items:stretch}.winner-sticker{width:100%;height:100%;max-width:100%;max-height:100%;aspect-ratio:auto;align-self:center;justify-self:center;transform:none!important}.winner-sticker img{max-width:none;object-fit:contain}.map-back{position:fixed;left:auto;right:12px;top:12px;min-width:82px;min-height:40px}.modal{padding:10px}.dialog{width:100%;max-height:calc(100dvh - 20px);padding:16px;overflow-y:auto;overscroll-behavior:contain}.dialog-head{position:relative;padding-right:38px}.icon-btn{position:absolute;top:-6px;right:-6px;min-width:40px;min-height:40px}}
+@media(min-width:701px) and (max-width:1024px) and (orientation:portrait){html,body{max-width:100%;overflow-x:hidden}body{overflow-y:auto}main{height:auto;min-height:100dvh;padding-top:30vh}#studentPage{width:min(620px,78vw)}.progress-open{overflow:hidden}.quest-map{display:block;overflow-x:auto;overflow-y:auto;background:#23b7e7;overscroll-behavior:contain;touch-action:pan-x pan-y}.quest-map-stage{position:relative;left:auto;top:auto;width:1180px;max-width:none;height:auto;aspect-ratio:1672/941;transform:none;margin:max(0px,calc((100dvh - 664px)/2)) 0 42px;background:none;overflow:visible}.quest-map-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.route-node{width:var(--node-size,58px)!important;height:var(--node-size,58px)!important;min-width:0;min-height:0;aspect-ratio:1;border-radius:50%}.winner-shelf{align-items:stretch;justify-items:stretch}.winner-sticker{width:100%;height:100%;max-width:100%;max-height:100%;aspect-ratio:auto;align-self:center;justify-self:center;transform:none!important}.winner-sticker img{max-width:none;object-fit:contain}.dialog{max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain}}
+@media(min-width:701px) and (max-height:700px){main{padding-top:28vh}#studentPage{width:min(450px,42vw)}}
+
+@media(max-width:900px) and (max-height:500px) and (orientation:landscape){
+body:not(.progress-open){overflow:hidden}
+body:not(.progress-open) main{width:100%;height:100dvh;min-height:0;padding:115px 10px 0;display:flex;justify-content:center;align-items:flex-start;overflow:hidden}
+body:not(.progress-open) #studentPage{width:min(390px,52vw);max-height:calc(100dvh - 92px)}
+body:not(.progress-open) .welcome{position:relative;inset:auto;top:auto;bottom:auto;width:min(280px,30vw);max-width:280px;height:auto;margin:4px 0 3px;padding:0 10%;font-size:clamp(10px,1.8vw,13px);line-height:1;transform:none}
+body:not(.progress-open) .profile{
+    width:86%;
+    height:auto;
+    aspect-ratio:3/2;
+    margin-left:auto;
+    margin-right:auto;
+}
+body:not(.progress-open) #profile{
+    position:relative;
+    top:-25px;
+}
+body:not(.progress-open) .profile h2{font-size:clamp(16px,2.7vw,20px)}
+body:not(.progress-open) .group{font-size:clamp(9px,1.7vw,12px)}
+body:not(.progress-open) .coin-total,body:not(.progress-open) .coin-plaque strong{font-size:clamp(12px,2.2vw,17px)}
+body:not(.progress-open) .metric,body:not(.progress-open) .metric-content strong{font-size:clamp(10px,1.9vw,14px)}
+body:not(.progress-open) .metric small,body:not(.progress-open) .metric-content span{font-size:clamp(6px,1.05vw,8px)}
+body:not(.progress-open) .profile .primary{font-size:clamp(10px,1.8vw,14px);min-height:22px}
+}
+
+@media(max-width:700px){
+.route-node{width:48px!important;height:48px!important;--node-size:48px;min-width:0;min-height:0;padding:3px 2px;border-radius:50%}
+.route-number{font-size:12px}
+.route-date{font-size:6px;margin-top:1px}
+.route-coins{font-size:7px;margin-top:1px}
+}
+@media(max-width:500px){
+.route-node{width:44px!important;height:44px!important;--node-size:44px;padding:2px;border-radius:50%}
+.route-number{font-size:11px}
+.route-date{font-size:5.5px}
+.route-coins{font-size:6.5px}
+}
+@media(max-width:1000px) and (max-height:500px) and (orientation:landscape){
+.route-node{width:40px!important;height:40px!important;--node-size:40px!important;min-width:0!important;min-height:0!important;padding:2px 2px 1px!important}
+.route-number{font-size:10px!important;line-height:1}
+.route-date{font-size:5px!important;margin-top:1px!important;line-height:1}
+.route-coins{font-size:6px!important;margin-top:1px!important;line-height:1}
+.route-coins img{width:1em;height:1em}
+}
+@media(max-width:700px){
+.winner-sticker{position:relative;width:auto;height:94%;max-width:100%;max-height:100%;aspect-ratio:.62;overflow:hidden;align-self:center;justify-self:center;transform:none!important}
+.winner-sticker img{position:absolute;width:500%;height:200%;max-width:none;object-fit:fill;left:calc(var(--winner-col) * -100%);top:calc(var(--winner-row) * -100%)}
+}
 </style>
 <script type="module">
 import{initializeApp}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";import{getFirestore,collection,doc,onSnapshot,query,orderBy}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
@@ -228,7 +281,7 @@ const routePoints = [
 function routePosition(index,total){if(total<=1)return routePoints[0];const scaled=index*(routePoints.length-1)/(total-1),start=Math.floor(scaled),end=Math.min(routePoints.length-1,start+1),part=scaled-start;return[routePoints[start][0]+(routePoints[end][0]-routePoints[start][0])*part,routePoints[start][1]+(routePoints[end][1]-routePoints[start][1])*part]}
 function lessonRoutePosition(number){const index=Math.max(0,Math.min(routePoints.length-1,(Number(number)||1)-1));return routePoints[index]}
 function renderWinners(){if(!state.student)return;const count=Math.min(10,Math.floor((Number(state.student.totalCoins)||0)/30)+(Number(state.student.bonusWinners)||0));$('winnerShelf').innerHTML=Array.from({length:count},(_,i)=>`<div class="winner-sticker" title="Winner ${i+1}"><img src="assets/winner-stickers-sheet.png" alt="Winner ${i+1}" style="--winner-col:${i%5};--winner-row:${Math.floor(i/5)}"></div>`).join('')}
-function openProgressMap(){document.body.classList.add('progress-open');$('progressMap').classList.remove('hidden');renderLessons();renderWinners()}
+function openProgressMap(){document.body.classList.add('progress-open');const map=$('progressMap');map.classList.remove('hidden');renderLessons();renderWinners();requestAnimationFrame(()=>{requestAnimationFrame(()=>{const scroller=[map,map.querySelector('.quest-map-stage')].find(element=>element&&(element.scrollWidth>element.clientWidth||element.scrollHeight>element.clientHeight))||map;scroller.scrollLeft=0;scroller.scrollTop=0})})}
 function closeProgressMap(){document.body.classList.remove('progress-open');$('progressMap').classList.add('hidden')}
 function questLessons(){if(state.lessons.length)return state.lessons;const dates=Array.isArray(state.group?.lessonDates)?state.group.lessonDates:[];return dates.map((date,index)=>({id:`calendar_${index+1}`,number:index+1,date,homework:false,behavior:false,activity:false,games:false,coinsEarned:0}))}
 function renderLessons(){const today=new Date();today.setHours(23,59,59,999);const lessons=questLessons(),total=lessons.length,nodeSize=Math.round(Math.max(58,Math.min(82,370/Math.sqrt(Math.max(1,total)))));$('lessons').style.setProperty('--node-size',`${nodeSize}px`);$('lessons').innerHTML=total?lessons.map(lesson=>{const[x,y]=lessonRoutePosition(lesson.number),future=asDate(lesson.date)>today&&!(Number(lesson.coinsEarned)>0);return`<button type="button" class="route-node ${future?'future':''}" style="left:${x}%;top:${y}%" data-lesson-number="${Number(lesson.number)}" aria-label="Урок ${lesson.number}, ${formatDate(lesson.date)}, монет ${Number(lesson.coinsEarned)||0}"><span class="route-number">${lesson.number}</span><span class="route-date">${formatDate(lesson.date)}</span><span class="route-coins"><img src="assets/star-coin.png" alt="">${Number(lesson.coinsEarned)||0}</span></button>`}).join(''):'<div class="map-empty">Уроки пока не добавлены</div>'}
